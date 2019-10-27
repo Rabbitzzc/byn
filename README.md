@@ -1,4 +1,7 @@
 # myan
+
+[![build status](https://travis-ci.com/Rabbitzzc/myan.svg?branch=master)](https://travis-ci.com/Rabbitzzc/myan.svg?branch=master)
+
 Mixture of yarn and npm. `myan`'s cli is meant to behave exactly the same with `yarn`.
 
 Never have to switch between npm and yarn [add, remove, init] ever again.

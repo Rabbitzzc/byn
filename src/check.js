@@ -1,5 +1,5 @@
 /**
- * @description check yarn ? npm ?  myan argv transform npm
+ * @description check yarn ? npm ?  myn argv transform npm
  */
 const fs = require('fs')
 const path = require('path')
@@ -24,20 +24,20 @@ let hasYarn = () => {
     })
 }
 
-// myan args ===>  yarn args
-// methods of myan synchronize with yarn, so just return.
-let yarnArgs = myanArgs => myanArgs
+// myn args ===>  yarn args
+// methods of myn synchronize with yarn, so just return.
+let yarnArgs = mynArgs => mynArgs
 
-// myan args ===> npm args
-let npmArgs = myanArgs => {
+// myn args ===> npm args
+let npmArgs = mynArgs => {
     // formate args  node a b c  ==> [a,b,c]
-    const args = minimist(transArgs(myanArgs))
+    const args = minimist(transArgs(mynArgs))
     // obj
     const commands = args._
 
     // yarn global add  xxx seans it does not belong to the current repository, so just run yarn
     if (commands[0] === 'global') {
-        // yarnArgs(myanArgs)
+        // yarnArgs(mynArgs)
         return ['install', ...commands.slice(2), '-g']
     }
     // default arg. if you use "yarn", means that you want to run "npm install" 

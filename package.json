@@ -1,10 +1,10 @@
 {
-    "name": "myan",
+    "name": "myn",
     "version": "1.0.0",
     "description": "🌝 mixture of yarn and npm.",
     "main": "src/check.js",
     "bin": {
-        "myan": "bin/myan.js"
+        "myn": "bin/myn.js"
     },
     "scripts": {
         "test": "tap"
@@ -24,7 +24,7 @@
         "tap": "^14.8.2"
     },
     "keywords": [
-        "myan",
+        "myn",
         "yarn",
         "npm"
     ]

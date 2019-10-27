@@ -3,3 +3,4 @@ test
 .nyc_output
 .gitignore
 .yarn.lock
+yarn-error.log

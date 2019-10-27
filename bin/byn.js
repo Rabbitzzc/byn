@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * @description: [myn] command. The condition determines whether the warehouse uses npm or yarn
+ * @description: [byn] command. The condition determines whether the warehouse uses npm or yarn
  * @date: 2019-10-25
  */
 
@@ -28,12 +28,12 @@ if (core_version < 4) {
 async function main() {
     // get command argv
     const has_yarn = await hasYarn()
-    const myn_args = process.argv.slice(2)
+    const byn_args = process.argv.slice(2)
 
     // check yarn or npm
     const redirect_command = has_yarn ? 'yarn' : 'npm'
 
-    const command_args = has_yarn ? yarnArgs(myn_args) : npmArgs(myn_args)
+    const command_args = has_yarn ? yarnArgs(byn_args) : npmArgs(byn_args)
 
     const emoji = {
         'yarn': '🌝',

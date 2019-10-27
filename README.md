@@ -1,48 +1,48 @@
-# myn
+# byn
 
 ![https://travis-ci.com/Rabbitzzc/myan.svg?branch=master](https://travis-ci.com/Rabbitzzc/myan.svg?branch=master)
 
-Mixture of yarn and npm. `myn`'s cli is meant to behave exactly the same with `yarn`.
+Blend yarn and npm. `byn`'s cli is meant to behave exactly the same with `yarn`.
 
 Never have to switch between npm and yarn [add, remove, init] ever again.
 
 When I download a repository, I always choose to use the yarn command, so sometimes there are two files in the repository, `package-lock.json` file and `yarns.lock` file, which makes me very upset.
 
-Try `myn`, and remove the annoyance.
+Try `byn`, and remove the annoyance.
 
 ## Install
 
 ```sh
 # use npm
-npm install myn -g
+npm install byn -g
 # use yarn
-yarn global myn
+yarn global byn
 ```
 
 ## Usage
 
 ```sh
 # install
-myn # or myn install
+byn # or byn install
 
 # dep
-myn add axios
+byn add axios
 
 # devDep
-myn add axios --dev
-myn add axios --D
+byn add axios --dev
+byn add axios --D
 
 # remove
-myn remove axios
+byn remove axios
 
 # scripts
-myn test
-myn build
-myn dev
+byn test
+byn build
+byn dev
 ```
 
 ## ChangeLog
-- `myan ==> myn`.
+- `myan ==> byn`.
 
 ## MIT
 [MIT](./LICENCE)

@@ -1,6 +1,6 @@
 # myn
 
-[![build status](https://travis-ci.com/Rabbitzzc/myn.svg?branch=master)](https://travis-ci.com/Rabbitzzc/myn.svg?branch=master)
+![](https://travis-ci.com/Rabbitzzc/myan.svg?branch=master)
 
 Mixture of yarn and npm. `myn`'s cli is meant to behave exactly the same with `yarn`.
 

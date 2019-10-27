@@ -37,8 +37,8 @@ let npmArgs = myanArgs => {
 
     // yarn global add  xxx seans it does not belong to the current repository, so just run yarn
     if (commands[0] === 'global') {
-        yarnArgs(myanArgs)
-        return
+        // yarnArgs(myanArgs)
+        return ['install', ...commands.slice(2), '-g']
     }
     // default arg. if you use "yarn", means that you want to run "npm install" 
     const tgt = commands.length ? commands[0] : 'install'

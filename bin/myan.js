@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * @description: [myan] command. The condition determines whether the warehouse uses NPM or yarn
+ * @description: [myan] command. The condition determines whether the warehouse uses npm or yarn
  * @date: 2019-10-25
  */
 
@@ -15,9 +15,8 @@ const {
     npmArgs
 } = require('../src/check')
 
-const node_version = process.versions.node // 判断当前 node 的环境
+const node_version = process.versions.node // node version
 const core_version = parseInt(node_version.split('.')[0], 10)
-
 
 // yarn not support less node v4
 if (core_version < 4) {
@@ -29,12 +28,12 @@ if (core_version < 4) {
 async function main() {
     // get command argv
     const has_yarn = await hasYarn()
-    const myan_args = process.slice(2)
+    const myan_args = process.argv.slice(2)
 
     // check yarn or npm
     const redirect_command = has_yarn ? 'yarn' : 'npm'
 
-    const command_args = has_yarn ? yarnArgs() : npmArgs()
+    const command_args = has_yarn ? yarnArgs(myan_args) : npmArgs(myan_args)
 
     const emoji = {
         'yarn': '🌝',
@@ -53,6 +52,6 @@ async function main() {
 
 // catch err and exit
 main().catch(err => {
-    console.log(err.red)
+    console.log(err)
     process.exit(1)
 })

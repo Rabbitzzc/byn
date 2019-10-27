@@ -1,0 +1,31 @@
+{
+    "name": "myan",
+    "version": "1.0.0",
+    "description": "🌝 mixture of yarn and npm.",
+    "main": "src/check.js",
+    "bin": {
+        "myan": "bin/myan.js"
+    },
+    "scripts": {
+        "test": "tap"
+    },
+    "author": "Rabbitzzc",
+    "license": "MIT",
+    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Rabbitzzc/remove-item-array"
+    },
+    "dependencies": {
+        "colors": "^1.4.0",
+        "minimist": "^1.2.0"
+    },
+    "devDependencies": {
+        "tap": "^14.8.2"
+    },
+    "keywords": [
+        "myan",
+        "yarn",
+        "npm"
+    ]
+}

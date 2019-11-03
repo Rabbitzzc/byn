@@ -1,6 +1,6 @@
 # byn
 
-![https://travis-ci.com/Rabbitzzc/myan.svg?branch=master](https://travis-ci.com/Rabbitzzc/myan.svg?branch=master)
+https://travis-ci.com/Rabbitzzc/byn.svg?branch=master
 
 Blend yarn and npm. `byn`'s cli is meant to behave exactly the same with `yarn`.
 

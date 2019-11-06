@@ -14,6 +14,8 @@ const {
     yarnArgs,
     npmArgs
 } = require('../src/check')
+const fs = require('fs')
+const path = require('path')
 
 const node_version = process.versions.node // node version
 const core_version = parseInt(node_version.split('.')[0], 10)
@@ -29,6 +31,12 @@ async function main() {
     // get command argv
     const has_yarn = await hasYarn()
     const byn_args = process.argv.slice(2)
+
+    const first = byn_args[0]
+    if (first === '-v' || '--version') {
+        console.log('now byn version is v' +  colors.green(JSON.parse(fs.readFileSync(path.resolve(__dirname, "../package.json"))).version))
+        return
+    }
 
     // check yarn or npm
     const redirect_command = has_yarn ? 'yarn' : 'npm'
